@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title> {{ .Title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
+<!-- Facebook and Twitter integration -->
+{{ if not .Site.Params.OpenGraph.hide }}
+<meta name="og:site_name" content="{{ .Site.Title }}">
+<meta name="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="og:url" content="{{ .Permalink }}">
+<meta name="og:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}">
+<meta name="twitter:title" content="{{ .Site.Title }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
+<meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.sidebar.avatar }}" />
+<meta name="twitter:card" content="" />
+{{ end }}
+<link rel="canonical" href="{{ .Permalink }}"/>
+<link rel="shortcut icon" href="favicon.ico">
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+<!--
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+
+-->
+<link rel="stylesheet" href="css/icomoon.css">
+<link rel="stylesheet" href="css/simple-line-icons.css">
+<link rel="stylesheet" href="css/main.min.css">
+{{ range .Site.Params.custom_css }}
+<link rel="stylesheet" href="{{ . }}">
+{{ end }}
+
+<script src="js/modernizr-2.6.2.min.js"></script>
+<!-- FOR IE9 below -->
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<![endif]-->

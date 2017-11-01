@@ -1,0 +1,37 @@
+# Page settings
+baseurl = "localhost:1313"
+title = "farm.red"
+languageCode = "en-us"
+theme = "singlepage-theme"
+
+[params]
+
+  custom_css = ["css/main.css", "css/custom2.css"]
+
+  # Meta
+  author = ""
+  description = ""
+  email = ""
+  # Contact section
+  [params.contact]
+    enable = true
+    map = false
+    title = "Get in touch"
+    description = "Contact us so we can let you know when we go live."
+
+    # Available icons: http://simplelineicons.com/
+    details = [
+        ["icon-home", "Athens, GA"],
+        ["icon-envelope", "info@farm.red"],
+      ]
+
+    name = "Name"
+    email = "Email"
+    phone = "Phone"
+    message = "Message"
+    button = "Send message"
+
+  # Footer section
+  [params.footer]
+    enable = true
+    copyright = '&copy; farm.red. All Rights Reserved.'
