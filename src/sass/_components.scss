@@ -53,7 +53,7 @@ section {
 
 nav {
   float: right;
-	padding: 20px;	
+	padding: 20px;
 }
 
 nav, .social {
@@ -103,13 +103,13 @@ footer {
   menu-item {
 		display:inline-block;
   }
-  
+
   header {
 		position: absolute;
 
   }
-  
-  nav ul, nav:active ul { 
+
+  nav ul, nav:active ul {
 
 		display: none;
 		position: absolute;
@@ -152,6 +152,29 @@ section.products {
 	}
 }
 
-section.services {
+.section {
+	.icon {
+	  font-size: 70px;
+	  margin-bottom: 30px;
+	  display: -moz-inline-stack;
+	  display: inline-block;
+	  zoom: 1;
+		color: #000;
+	}
+}
 
+section.services {
+	h1 {
+		text-align:  center;
+
+	}
+	
+	.section-item {
+		border: 1px solid $border-color;
+		border-radius: 8px;
+		text-align: center;
+		box-shadow: 4px 4px 4px 0;
+	}
+
+	padding-right: 30px;
 }

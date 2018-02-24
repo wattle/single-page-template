@@ -143,5 +143,23 @@ section.products {
     border: 2px solid #000;
     border-radius: 8px; }
 
+.section .icon {
+  font-size: 70px;
+  margin-bottom: 30px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  color: #000; }
+
+section.services {
+  padding-right: 30px; }
+  section.services h1 {
+    font-size: 1em; }
+  section.services .section-item {
+    border: 1px solid #000;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 4px 4px 4px 0; }
+
 body {
   margin: 0 auto; }

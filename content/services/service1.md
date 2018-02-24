@@ -8,5 +8,5 @@ categories:
   - "Development"
   - "VIM"
 slug: "spf13-vim-3-0-release-and-new-website"
+icon: "icon-layers2"
 ---
-

@@ -27,23 +27,27 @@
 </div>
 
 {{ range $name, $taxonomy := .Site.Sections }}
-
 <section id="{{$name}}" class="section, {{lower $name}}">
-<h1>{{$name}}</h1>
+<h1 itemprop="name">{{$name}}</h1>
 
 <div class="section-items">
 {{ range $pageName, $page := $taxonomy.Pages }}
-
-<div class="section-item">
-<h2>{{$page.Title}}</h2>
-<p>
-{{$page.Description}}
-</p>
-</div>
+  <div class="section-item">
+    {{ if ne $page.Params.bodyimage nil }}
+    <a href="{{.Permalink}}" alt="{{.Title}} "><img src="{{ printf "/%s/%s" $name $.Params.bodyimage }}" itemprop="image"
+      alt="{{ .Title }}"
+      class="bodyimg"
+       /></a>
+    {{else}}
+    {{if ne $page.Params.icon nil}}<i class="icon to-animate-2 {{ $page.Params.icon | markdownify }}"></i>{{end}}
+    <h2>{{$page.Title}}</h2>
+    <p>
+    {{$page.Description}}
+    </p>
+    {{end}}
+  </div>
 {{ end}}
-
-
-
+</div>
 </section>
 
 {{ end }}
